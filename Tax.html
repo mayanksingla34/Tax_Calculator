@@ -14,6 +14,15 @@
     <h1 class="display-4">Tax Calculator</h1>
   </div>
 </div>
+<div style="text-align: center;padding-bottom: 15px">
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button id="oldb" type="button" class="btn btn-secondary">Old</button>
+  <button id="newb" type="button" class="btn btn-secondary">New</button>
+</div>
+</div>
+<div style="text-align: center;">
+	<p id="para">All deductions are allowed</p>
+</div>
 <div class="col">
 <table class="table table-hover" style="border: 2px solid grey;">
   <thead class="thead-dark">
@@ -45,7 +54,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">ii) Standard Deduction</td>
 <td>
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td>Max Rs. 50000</td>
 </tr>
@@ -54,7 +63,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">iii) Pay Recovery</td>
 <td>
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td></td>
 </tr>
@@ -63,7 +72,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">iv) Any other allowance to be exempted(e.g., Hill Allowance)</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Max Rs. 800/- per month.</td>
 </tr>
@@ -72,7 +81,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">v) Special compensatory allowance, Remote locality allowance, Difficult area allowance, or Disturbed area allowance.</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Max Rs. 1300/- per month.</td>
 </tr>
@@ -90,7 +99,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">vii) On the basis of production of Rent Receipt (Anyone whichever is less)</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="hidden" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="hidden" value="0">
 <td></td>
 </tr>
 
@@ -98,7 +107,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 30px;">i) Total HRA Received</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -107,7 +116,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 30px;">ii) Annual Rent Paid</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -116,7 +125,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 30px;">iii) Basic Pay</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -125,7 +134,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 30px;">iv) DA</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -141,7 +150,7 @@
 
 <tr>
 <td></td>
-<td colspan="0" style="padding-left: 0px;">viii) Less H.R.A Received (If any)<input class="form-control" style="width:90%;text-align:right" type="hidden" value="0"></td>
+<td colspan="0" style="padding-left: 0px;">viii) Less H.R.A Received (If any)<input class="form-control" class="newinp" style="width:90%;text-align:right" type="hidden" value="0"></td>
 <td id="tot1_3" style="text-align:right">
 
 0
@@ -152,7 +161,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">ix) Children Education Reimbursement</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -161,7 +170,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">x) Medical Reimbursement</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -170,7 +179,7 @@
 <td></td>
 <td colspan="0" style="padding-left: 0px;">xi) CM Security Risk Allowance Reimbursement</td>
 <td class="Amount" style="text-align:right">
-<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -187,7 +196,7 @@
 <td>2</td>
 <td colspan="0" style="padding-left: 0px;">i) Professional Tax</td>
 <td class="Amount" style="text-align:right">
-	<input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+	<input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -195,7 +204,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">ii) House Loan "interest under Chapter VI-A</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">HBA Borrowed on or after 01-04-1999 and the possession taken before 01-04-2008, Maximum entitlement is Rs. 2,00,000/- otherwise Rs. 30,000/- only.</td>
 </tr>
@@ -212,7 +221,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">i) Income from NSC etc.</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -220,7 +229,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">ii) Income from other source</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -228,7 +237,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">iii) Income from Interest on Post Office Saving Account</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -236,7 +245,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">iv) Income from Interest on Saving Bank</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -244,7 +253,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">v) Less Interest on Post Office Saving Account(U/s 10 (ii)(i))</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Exemption upto Rs 3,500/- in a Single Account Rs. 7,000/- in Joint Account</td>
 </tr>
@@ -266,7 +275,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">i) G.P.F.</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -274,7 +283,7 @@
 <tr >
 <td></td>
 <td colspan="0" style="padding-left: 0px;">ii) C.G.E.G.I.S.</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -282,7 +291,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">iii) H.B.A. Principal</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -290,7 +299,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">iv) LIC</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -298,7 +307,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">v) PLI</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -306,7 +315,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">vi) CTD 10yrs/P.P.F.</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -314,7 +323,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">vii) NSC/NSS</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Amount with (<font color="red">*</font>) are deducted by DDO.</td>
 </tr>
@@ -322,7 +331,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">viii) Tuition Fees</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Entered amount must be greater than or equal to the amount deducted by DDO.</td>
 </tr>
@@ -330,7 +339,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">ix) Interest on Reinvested NSC</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -338,7 +347,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">x) Bonds (if any)</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -346,7 +355,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">xi) Pension Fund (80CCC)</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -354,7 +363,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">xii) Employees Contribution(TIER-I)(N.P.S.) (80CCD)</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control"  style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -362,7 +371,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">xiii) Other Office Saving under Section 80C</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -370,7 +379,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">xiv) Employees Contribution(TIER-II)(N.P.S.) (80CCD)</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control"  style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -386,7 +395,7 @@
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;">80CCD(1B)-Additional Contribution to pension scheme</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Max Limit 50000</td>
 </tr>
@@ -412,7 +421,7 @@
 <tr style="border-top: 2px solid;">
 <td>7</td>
 <td colspan="0" style="padding-left: 0px;"><b>Less Deductions under Chapter VI</b></td>
-<td class="Amount"><input class="form-control" style="width:90%;text-align:right" type="hidden" value="0">
+<td class="Amount"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="hidden" value="0">
 </td>
 <td></td>
 </tr>
@@ -423,7 +432,7 @@
 <span style="margin-left: -22px;"></span> a <span style="margin-left: -5px; margin-right: 8px;">)</span>
 i) Medical Insurance (80D) CGHS         
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -431,7 +440,7 @@ i) Medical Insurance (80D) CGHS
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 30px;">ii) CGHS Deducted at Other  Office</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -439,7 +448,7 @@ i) Medical Insurance (80D) CGHS
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 30px;">iii) Medical Insurance (80D) OTHERS</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">
 For insurance on health of self, spouse and dependent children(or contribution to CGHS) - Max Rs.25,000. For insurance on health of parents-Max Rs.25,000
@@ -449,7 +458,7 @@ For insurance on health of self, spouse and dependent children(or contribution t
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 30px;">iv) Medical Insurance (80D) SENIOR CITIZEN</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">
 For insurance on health of parents-Max Rs. 20,000 in case of senior citizen.
@@ -462,7 +471,7 @@ For insurance on health of parents-Max Rs. 20,000 in case of senior citizen.
 <span style="margin-left: -22px;"></span> b <span style="margin-left: -5px; margin-right: 8px;">)</span>
 i) Medical Treatment (80DD)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Medical treatment of handicapped dependent.</td>
 </tr>
@@ -470,7 +479,7 @@ i) Medical Treatment (80DD)
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 30px;">ii) Medical Treatment (80DDB)</td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Expenditure on specified disease.Treatment of assesse or dependent spouse, children, parent amount upto 40000/-</td>
 </tr>
@@ -481,7 +490,7 @@ i) Medical Treatment (80DD)
 <span style="margin-left: -22px;"></span> c <span style="margin-left: -5px; margin-right: 8px;">)</span>
 Donations (80G)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">
 50,- Jawahar Lal Nehru Memorial Fund, PM Drought Relief Fund, National Childrens Fund, Indira Gandhi Memorial Trust or Rajiv Gandhi Foundation.100,- National Defence Fund, PM National Relief Fund, National Foundation for Communal Harmony,etc. The tax relief in respect of others u/s 80G shall have to be claimed by filing IT return.
@@ -494,7 +503,7 @@ Donations (80G)
 <span style="margin-left: -22px;"></span> d <span style="margin-left: -5px; margin-right: 8px;">)</span>
 Physically Handicap (80U)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -505,7 +514,7 @@ Physically Handicap (80U)
 <span style="margin-left: -22px;"></span> e <span style="margin-left: -5px; margin-right: 8px;">)</span>
 Investment under equity saving scheme (80CCG)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Gross total income does not exceed 10 lacs; shares in notified scheme; lock-in period is 3 years; maximum Rs.25,000/-</td>
 </tr>
@@ -516,7 +525,7 @@ Investment under equity saving scheme (80CCG)
 <span style="margin-left: -22px;"></span> f <span style="margin-left: -5px; margin-right: 8px;">)</span>
 Loan for Higher Education (80E)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">A Maximum period of 8 years begining from the year in which payment of Interest on the loan begins or till the interest is paid in full, whichever is earlier.
 </td>
@@ -528,7 +537,7 @@ Loan for Higher Education (80E)
 <span style="margin-left: -22px;"></span> g <span style="margin-left: -5px; margin-right: 8px;">)</span>
 Employers/ Government Contribution (N.P.S)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -539,7 +548,7 @@ Employers/ Government Contribution (N.P.S)
 <span style="margin-left: -22px;"></span> h <span style="margin-left: -5px; margin-right: 8px;">)</span>
 Less Interest on deposits in savings accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(80TTA)
 </td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc">Maximum of Rs. 10,000/- of any income by way of interest on deposits (not being time deposits) in a saving accounts.</td>
 </tr>
@@ -582,11 +591,12 @@ Less Interest on deposits in savings accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(80T
 </td>
 <td class="tddesc"></td>
 </tr>
-<tr><td></td><td colspan="3">Upto Rs.250000/- Nil</td></tr>
-<tr><td></td><td colspan="3">Rs.250001/- to Rs.500000/- 5%</td></tr>
-<tr><td></td><td colspan="3">Rs.500001/- to Rs.1000000/- 12500+20% of the amount exceeding Rs.500000/-</td></tr>
-<tr><td></td><td colspan="3">Rs.1000001/- to Rs.1500000000/- 112500+30% of the amount exceeding Rs.1000000/-</td></tr>                                        
-                                
+
+<tr><td></td><td id="tacal1" colspan="3">Upto Rs.2,50,000/- Nil</td></tr>
+<tr><td></td><td id="tacal2" colspan="3">Rs.2,50,001/- to Rs.5,00,000/- 5%</td></tr>
+<tr><td></td><td id="tacal3" colspan="3">Rs.5,00,001/- to Rs.10,00,000/- 20%</td></tr>
+<tr><td></td><td id="tacal4" colspan="3">Above Rs.10,00,000/- 30%</td></tr>
+
 <tr style="border-top: 2px solid;">
 <td>11</td>
 <td colspan="0" style="padding-left: 0px;"><b>Tax Rebate under Section  87A (Net Taxable Income upto 5,00,000)</b></td>
@@ -636,7 +646,7 @@ Less Interest on deposits in savings accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(80T
 <td>13</td>
 <td colspan="0" style="padding-left: 0px;">
 <b>a) Total Income Tax deducted for Financial Year</b></td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -644,7 +654,7 @@ Less Interest on deposits in savings accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(80T
 <tr>
 <td></td>
 <td colspan="0" style="padding-left: 0px;"><b>b) Total Ed.Cess deducted for Financial Year</b></td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 </tr>
@@ -652,7 +662,7 @@ Less Interest on deposits in savings accounts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(80T
 <tr style="border-top: 2px solid;">
 <td>14</td>
 <td colspan="0" style="padding-left: 0px;"><b>Total Relief under Section 89</b></td>
-<td class="Amount" style="text-align:right"><input class="form-control" style="width:90%;text-align:right" type="text" value="0">
+<td class="Amount" style="text-align:right"><input class="form-control" class="newinp" style="width:90%;text-align:right" type="text" value="0">
 </td>
 <td class="tddesc"></td>
 
