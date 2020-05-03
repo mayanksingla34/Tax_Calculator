@@ -1,5 +1,8 @@
 /*Made by Mayank Singla*/
 var inp= document.getElementsByTagName("input");
+var oldb= document.getElementById("oldb");
+var newb= document.getElementById("newb");
+var newinp= document.getElementsByClassName("newinp");
 var i;
 for (i = 0; i < inp.length; i++) {
   inp[i].onfocus = function() {if(this.value=="0"){this.value=''}}; /* Removing value on focus*/
@@ -27,8 +30,37 @@ var tot12_3= document.getElementById("tot12_3");        //Id element of total va
 var tot12_4= document.getElementById("tot12_4");        //Id element of total values
 var tot15= document.getElementById("tot15");        //Id element of total values
 
+var taxcal1= document.getElementById("tacal1");
+var taxcal2= document.getElementById("tacal2");
+var taxcal3= document.getElementById("tacal3");
+var taxcal4= document.getElementById("tacal4");
 
+var flag=0;
 
+oldb.onclick = function() {oldbu()};
+newb.onclick = function() {newbu()};
+
+function oldbu(){
+var para1= document.getElementById("para");
+para.innerHTML= "All deductions are allowed";
+taxcal1.innerHTML='Upto Rs.2,50,000/- Nil';
+taxcal2.innerHTML='Rs.2,50,001/- to Rs.5,00,000/- 5%';
+taxcal3.innerHTML='Rs.5,00,001/- to Rs.10,00,000/- 20%';
+taxcal4.innerHTML='Above Rs.10,00,000/- 30%';
+flag=0;
+everything();
+}
+
+function newbu() {
+var para2= document.getElementById("para");
+para.innerHTML= "No deduction except NPS is allowed";
+taxcal1.innerHTML='Upto Rs.2,50,000/- Nil';
+taxcal2.innerHTML='Rs.2,50,001/- to Rs.5,00,000/- 5%	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs.10,00,001/- to Rs.12,50,000/- 20%';
+taxcal3.innerHTML='Rs.5,00.001/- to Rs.7,50,000/- 10%	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs.12,50,001/- to Rs.15,00,000/- 25%';
+taxcal4.innerHTML='Rs.7,50,001/- to Rs.10,00,000/- 15%	&nbsp&nbsp&nbsp&nbsp&nbsp	Above Rs.15,00,000/-  30%';
+flag=1;
+everything();
+}
 
 function everything() {
 
@@ -162,6 +194,7 @@ total9=Math.ceil(total8 / 10) * 10;
 tot9.innerHTML= total9;
 
 total10=total9;
+if(flag==0){
 if(total10<=250000){
 	total10=0;
 }
@@ -182,7 +215,49 @@ else
 	total10=total10-1000000;
 	total10=temp+((30*total10)/100);
 }
+}
+if(flag==1){
+if(total10<=250000){
+	total10=0;
+}
+else if(total10<=500000)
+{
+	total10=total10-250000;
+	total10=((5*total10)/100);
+}
+else if(total10<=750000)
+{
+	var temp =12500;
+	total10=total10-500000;
+	total10=temp+ ((10*total10)/100);
+}
+else if(total10<=1000000)
+{
+	var temp =37500;
+	total10=total10-750000;
+	total10=temp+ ((15*total10)/100);
+}
+else if(total10<=1250000)
+{
+	var temp =50000;
+	total10=total10-1000000;
+	total10=temp+ ((20*total10)/100);
+}
+else if(total10<=1500000)
+{
+	var temp =62500;
+	total10=total10-1250000;
+	total10=temp+ ((25*total10)/100);
+}
+else
+{
+	var temp =125000;
+	total10=total10-1500000;
+	total10=temp+((30*total10)/100);
+}
+}
 tot10.innerHTML= total10;
+
 if(total9<=500000){
 	total11=total10;
 }
