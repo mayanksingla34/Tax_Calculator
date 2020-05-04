@@ -2,7 +2,6 @@
 var inp= document.getElementsByTagName("input");
 var oldb= document.getElementById("oldb");
 var newb= document.getElementById("newb");
-var newinp= document.getElementsByClassName("newinp");
 var i;
 for (i = 0; i < inp.length; i++) {
   inp[i].onfocus = function() {if(this.value=="0"){this.value=''}}; /* Removing value on focus*/
@@ -43,6 +42,12 @@ newb.onclick = function() {newbu()};
 function oldbu(){
 var para1= document.getElementById("para");
 para.innerHTML= "All deductions are allowed";
+var j;
+for (j = 1; j < inp.length; j++) {
+  inp[j].type = "text";
+}
+inp[5].type = "hidden";
+inp[10].type = "hidden";
 taxcal1.innerHTML='Upto Rs.2,50,000/- Nil';
 taxcal2.innerHTML='Rs.2,50,001/- to Rs.5,00,000/- 5%';
 taxcal3.innerHTML='Rs.5,00,001/- to Rs.10,00,000/- 20%';
@@ -54,6 +59,18 @@ everything();
 function newbu() {
 var para2= document.getElementById("para");
 para.innerHTML= "No deduction except NPS is allowed";
+var j;
+for (j = 1; j < inp.length; j++) {
+  inp[j].type = "hidden";
+}
+inp[16].type = "text";
+inp[17].type = "text";
+inp[18].type = "text";
+inp[19].type = "text";
+inp[32].type = "text";
+inp[34].type = "text";
+inp[49].type = "text";
+inp[50].type = "text";
 taxcal1.innerHTML='Upto Rs.2,50,000/- Nil';
 taxcal2.innerHTML='Rs.2,50,001/- to Rs.5,00,000/- 5%	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs.10,00,001/- to Rs.12,50,000/- 20%';
 taxcal3.innerHTML='Rs.5,00.001/- to Rs.7,50,000/- 10%	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	Rs.12,50,001/- to Rs.15,00,000/- 25%';
